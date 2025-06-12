@@ -7,7 +7,6 @@ function addTask() {
         return;
     }
 
-
     
     // Send task to backend
     fetch('add_task.php', {
