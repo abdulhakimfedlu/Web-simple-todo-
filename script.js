@@ -8,6 +8,7 @@ function addTask() {
     }
 
     
+    
     // Send task to backend
     fetch('add_task.php', {
         method: 'POST',
