@@ -1,3 +1,4 @@
+
 <?php
 $host = 'localhost';
 $db = 'todo_db';
