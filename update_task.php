@@ -2,7 +2,6 @@
 header('Content-Type: application/json');
 include 'db_connect.php';
 
-
 $id = $_POST['id'] ?? 0;
 $completed = $_POST['completed'] ?? 0;
 
