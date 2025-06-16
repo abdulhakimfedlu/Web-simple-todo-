@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json');
 include 'db_connect.php';
-
 try {
     $stmt = $pdo->query('SELECT * FROM tasks ORDER BY id DESC');
     $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
