@@ -6,6 +6,7 @@ function addTask() {
         alert('Please enter a task!');
         return;
     }
+    
     // Send task to backend
     fetch('add_task.php', {
         method: 'POST',
