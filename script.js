@@ -7,7 +7,7 @@ function addTask() {
         return;
     }
     
-    // Send task to backend
+   
     fetch('add_task.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -29,8 +29,7 @@ function loadTasks() {
         .then(response => response.json())
         .then(tasks => {
             const taskList = document.getElementById('taskList');
-            taskList.innerHTML = ''; // Clear current list
-
+            taskList.innerHTML = ''; 
             tasks.forEach(task => {
                 const li = document.createElement('li');
                 li.className = task.completed ? 'completed' : '';
@@ -52,7 +51,7 @@ function toggleTask(id, completed) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            loadTasks(); // Reload tasks
+            loadTasks(); 
         } else {
             alert('Error updating task: ' + data.message);
         }
@@ -69,7 +68,7 @@ function deleteTask(id) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                loadTasks(); // Reload tasks
+                loadTasks(); 
             } else {
                 alert('Error deleting task: ' + data.message);
             }
