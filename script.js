@@ -16,8 +16,8 @@ function addTask() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            taskInput.value = ''; // Clear input
-            loadTasks(); // Reload tasks
+            taskInput.value = '';
+            loadTasks(); 
         } else {
             alert('Error adding task: ' + data.message);
         }
